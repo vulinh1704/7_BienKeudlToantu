@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<script>
+
+    var inputVatLy;
+    var inputHoaHoc;
+    var inputSinhHoc;
+    inputVatLy = prompt("Nhap diem vat ly");
+    inputHoaHoc = prompt("Nhap diem hoa hoc");
+    inputSinhHoc = prompt("Nhap diem sinh hoc");
+
+    var VL = parseFloat(inputSinhHoc);
+    var HH = parseFloat(inputHoaHoc);
+    var SH = parseFloat(inputSinhHoc);
+    var Sum = (VL + HH + SH);
+    var TB = Sum/3;
+    document.write('Tong = ' + Sum);
+    document.write('<br>');
+    document.write('Trung binh = ' + TB);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập giá trị độ C <br/>
+<input type="text" id="C" onchange="myFunction()"/>
+<script>
+    function myFunction() {
+        var doC = document.getElementById('C').value;
+        var C = parseFloat(doC);
+        var F = (C * 9 + 160)/5;
+        document.write('F = ' + F);
+    }
+</script>
+</body>
+</html>

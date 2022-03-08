@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập giá trị r <br/>
+<input type="text" id="C" onchange="myFunction()"/>
+<script>
+    function myFunction() {
+        const pi = 3.142;
+        var bkr = document.getElementById('C').value;
+        var r = parseFloat(bkr);
+        var S = 2*pi*r*r;
+        var C = 2*pi*r
+        document.write('dien tich S = ' + S);
+        document.write('<br/>');
+        document.write('chu vi C = ' + C);
+    }
+</script>
+</body>
+</html>
