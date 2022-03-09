@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><h3>Caculator</h3></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="num1">
+            <input type="text" id="num2">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="myFunction()" id="Add">Addition(+)</button>
+            <button onclick="myFunction1()" id="Sub">Subtraction(-)</button>
+            <button onclick="myFunction2()" id="Mul">Multiplication(*)</button>
+            <button onclick="myFunction3()" id="Div">Division(/)</button>
+        </td>
+    </tr>
+    <tr>
+        <td id=Result></td>
+    </tr>
+</table>
+<script>
+    var num1 = document.getElementById("num1");
+    var num2 = document.getElementById("num2");
+    result = document.getElementById("Result");
+
+    function myFunction() {
+        let val = +num1.value + +num2.value;
+        result.innerText = "Result Division " + val;
+
+    }
+
+    function myFunction1() {
+        let val = +num1.value - +num2.value;
+        result.innerText = "Result Division " + val;
+
+    }
+
+    function myFunction2() {
+        let val = +num1.value * +num2.value;
+        result.innerText = "Result Division " + val;
+
+    }
+
+    function myFunction3() {
+        let val = +num1.value / +num2.value;
+        result.innerText = "Result Division " + val;
+
+    }
+</script>
+</body>
+</html>
