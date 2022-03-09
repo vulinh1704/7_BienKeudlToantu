@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <style>
+        td{
+            width: 100px;
+            text-align: center;
+        }
+        button {
+            background: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amuont</th>
+        <th style="width: 100px"></th>
+        <th>From Currency</th>
+        <td></td>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="value"></td>
+        <td></td>
+        <td><select id="select1">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td></td>
+        <td><select id="select2">
+            <option value="VND" >VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><button id="Click" onclick="convert()">Convert</button></td>
+    </tr>
+    <tr style="text-align: left">
+        <th colspan="6" style="color: blue" id="Result"></th>
+    </tr>
+    <p id="demo"></p>
+    <script>
+        function convert() {
+            var doi;
+            let inValue = document.getElementById("value").value;
+            let select1 = document.getElementById("select1").value;
+            let select2 = document.getElementById("select2").value;
+            let result =document.getElementById("Result");
+            if (select1 == select2){
+                doi = inValue;
+                doi = parseFloat(inValue);
+                result.innerText = "Result  " + doi + document.getElementById("select2").value ;
+            }
+            else if (select1 == "VND" && select2 == "USD"){
+                doi = inValue/24000;
+                doi = parseFloat(doi);
+                result.innerText = "Result  " + doi + document.getElementById("select2").value ;
+            }
+            else if (select1 == "USD" && select2 == "VND"){
+                doi = inValue*24000;
+                doi = parseFloat(doi);
+                result.innerText = "Result  " + doi + document.getElementById("select2").value ;
+            }
+        }
+
+    </script>
+</table>
+</body>
+</html>
